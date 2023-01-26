@@ -1,0 +1,13 @@
+function numberTarget(input,target){
+    let arr = [];
+    for(let i=1; i<input.length; i++){
+        if(input[i] + input[i-1] === target){
+            arr.push(input[i], input[i-1]);
+        }
+    }
+    return arr;
+}
+
+let input = [1,2,3,4,5];
+let target = 3;
+console.log(numberTarget(input,target));
